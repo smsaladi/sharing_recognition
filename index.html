@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Sharing recognition</title>
+
+    <script>
+
+    </script>
+  </head>
+  <body>
+
+    <div class="jumbotron">
+        <h1 class="display-4">Sharing recognition</h1>
+        <p class="lead">A trial with the eLife ECAG</p>
+        <hr class="my-4">
+        <p>
+            Alphabetic ordering is used too often, yet randomization is too easy.
+            It seems like a clever way to help spread around recognition.
+            Here is trial to test it out—and perhaps to get the word out.
+        </p>
+    </div>
+
+    <div class="container-fluid">
+
+    <div class="row"><div class="col">
+
+      <div class="card">
+        <div class="card-header">
+          Completely random (upon each refresh)
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Each time the page is loaded. The order is randomized.
+            Refresh the page (e.g. CTRL + R, Option + R) to test it out.</h5>
+
+          <pre><code>
+<div id="random_always"></div>
+          </code></pre>
+
+          
+          <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+          <a href="test/random.html" target="_blank" class="btn btn-primary">Always random</a>
+          <a href="//github.com/smsaladi/sharing_recognition/blob/master/random_order.js" class="btn btn-light">Code <i class="fab fa-github"></i></a>
+        </div>
+      </div>
+
+    </div></div>
+    <br/>
+
+    <div class="row"><div class="col">
+
+      <div class="card">
+        <div class="card-header">
+          Randomized by time period
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">
+            The order is randomized every interval, e.g. every hour or every day.
+            Try in a little bit to see the positions change. The seed is printed to
+            the console to make verifying more convenient. 
+          </h5>
+
+          <pre><code>
+<div id="random_period"></div>
+          </code></pre>
+
+          <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+          <a href="test/random_hour.html" target="_blank" class="btn btn-primary">Hour</a>
+          <a href="test/random_day.html" target="_blank" class="btn btn-primary">Day</a>
+          <a href="//github.com/smsaladi/sharing_recognition/blob/master/random_order_period.js" class="btn btn-light">Code <i class="fab fa-github"></i></a>
+        </div>
+      </div>
+
+    </div></div>
+
+    <br/>
+    <br/>
+
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+            integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script> 
+    $(function(){
+      $("#random_always").load("random_order.js"); 
+      $("#random_period").load("random_order_period.js"); 
+    });
+    </script> 
+  </body>
+</html>

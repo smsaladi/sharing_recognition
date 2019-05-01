@@ -1,0 +1,28 @@
+<html> 
+  <head> 
+      <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+      integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+      crossorigin="anonymous"></script>
+      <script src="../random_order_period.js"></script>
+
+      <script> 
+      $(function(){
+        $("#content")
+          .load("https://cors.io/?https://elifesciences.org/about/people/early-career",
+          function() {
+            console.log("The seed is " + seed);
+            randomize_order($('li.about-profiles__item').toArray());
+          })
+      });
+      </script>
+  </head> 
+
+  <body> 
+     <div>
+        <base href="https://elifesciences.org/about/people/early-career">
+        <div id="content">
+
+        </div>
+     </div>
+  </body> 
+</html>
