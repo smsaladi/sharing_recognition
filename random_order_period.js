@@ -1,3 +1,14 @@
+// 
+// A bit of code to randomize elements "every XX" time period.
+// This might be nice to keep things changing but consistant, e.g. upon
+// a refresh of a page.
+// The call corresponds to the ECAG page on eLife's website.
+//
+// Author: Shyam Saladi (saladi@caltech.edu)
+// Date: April 2019
+// License: CC0 - “No Rights Reserved” (i.e. Public Domain)
+//
+
 function getSeed(period = "hour") {
     var millisec = new Date().valueOf();
     var hours = Math.floor(millisec / 3.6e6);
